@@ -1,115 +1,357 @@
 body {
-  margin: 0;
-  font-family: "Roboto", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* HEADER  */
+.headerContainer {
+    background-color: #0171F9;
 }
 .header {
-  background-color: #0171f9;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 50px;
+    /* position: sticky; */
+    /* top: 0; */
+    height: 80px;
+    background-color: #0171F9;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px 0 100px;
+    max-width: 1300px;
+    margin: auto;
 }
-.logo {
-  width: 100px;
+
+.headerLinks {
+    width: 50%;
 }
+
+.headerLinks{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+.headerLinks a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 50px;
+    transition: .3s;
+}
+
+.headerLinks a:hover {
+    background-color: #1A7FF9;
+}
+
+.logo img {
+    width: 150px;
+}
+/* END HEADER  */
+
+/* LANDING PAGE  */
+.landingPageContainer {
+    background-color: #0171F9;
+    border-radius: 0 0 100px 100px;
+}
+.landingPage {
+    display: flex;
+    background-color: #0171F9;
+    color: #fff;
+    padding: 100px 0;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.landingPage .slogan {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 50px;
+}
+
+.landingPage .welcome {
+    font-size: x-large;
+    height: 10px;
+}
+
+.landingPage .description {
+    color: #000;
+    width: 80%;
+    font-weight: 500;
+    
+}
+
+.searchBar {
+    position: relative;
+    margin-top: 100px;
+}
+
+.searchBar input {
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    width: 40%;
+    height: 50px;
+    font-size: large;
+    padding-left: 20px;
+}
+
+.searchBar input::placeholder {
+    font-size:medium;
+}
+
 .btn {
-  background-color: #ee626b;
-  border-radius: 15px;
-  padding: 5px 15px;
-  color: #ffffff;
-  border: none;
+    border-radius: 50px;
+    height: 52px;
+    border: none;
+    font-weight:600;
+    font-size: medium;
+    padding: 0 20px;
+    background-color: #EE626B;
+    color: #fff;
+    text-transform: uppercase;
+    transition: .3s;
 }
 
 .btn:hover {
-  background-color: #f2858c;
+    background-color: #9E4147;
+    cursor: pointer;
 }
 
-.header-links a {
-  color: white;
-  padding: 5px 15px;
-  text-decoration: none;
-  border-radius: 15px;
+.searchBar .searchBtn {
+    position: absolute;
+    left: 300px;
 }
 
-.header-links a:hover {
-  background-color: #2386fe;
+.leftSide {
+    padding-top: 30px;
+    flex: 8;
 }
 
-.landing-page {
-  background-color: #0171f9;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 25px 50px;
-  color: #ffffff;
-  border-radius: 0 0 50px 50px;
+.imageContainer {
+    flex: 4;
 }
 
-.landing-page-left-section {
-  width: 500px;
-}
-
-.landing-page-search input {
-  border-radius: 50px;
-  border: none;
-  outline: none;
-  height: 30px;
-  padding: 0 10px;
-}
-
-.landing-page-search button {
-  position: absolute;
-  left: 200px;
-  height: 30px;
-}
-
-.landing-page-image-container img {
-  border-radius: 20px;
-  width: 250px;
-}
-
-.trending-container {
-  padding: 25px 50px;
-}
-
-.trending-container span {
-    color: #ee626b;
-    text-transform: uppercase;
-    font-size: 14px;
-}
-
-.trending-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.trending-header h1 {
-    margin-top: 0;
-}
-
-.trending-cards {
-    display: flex;
-    gap: 12px;
-}
-
-.card {
-    width: 300px;
-    background-color: #EEEEEE;
+.imageContainer img {
+    width: 100%;
     border-radius: 20px;
 }
 
-.card .thumb {
-    border-radius: 20px 20px 0 0;
+
+/* END LANDING PAGE  */
+
+/* TRENDING GAMES */
+.trendingContainer {
+    margin: auto;
+    max-width: 1300px;
+    margin-top: 100px;
 }
 
-.card-info {
+.trendingHeader, .mostHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 25px;
+    align-items: center;
+    padding-bottom: 40px;
+    
 }
 
-.card-info img {
-    width: 50px;
+.trendingHeader h1, .mostHeader h1, .categoryHeader h1 {
+    margin-top: 0;
 }
+
+.trendingContainer span, .mostContainer span, .categoryHeader span {
+    text-transform: uppercase;
+    color: #EE626B;
+    font-weight: 600;
+}
+
+.trendingCard, .mostCards, .categoryCards{
+    display: flex;
+    justify-content: space-between;
+}
+
+.trendingCard .card {
+    position: relative;
+}
+
+
+.trendingCard .card img {
+    border-radius: 20px;
+}
+
+.trendingCard .card .cardInfo {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    background-color: #EEEEEE;
+    border-radius: 0 0 20px 20px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.trendingCard .card .cardName {
+    padding: 0 20px;
+}
+
+.trendingCard .cardName h3 {
+    margin-top: 0;
+}
+
+.trendingCard .cardName p {
+    color: gray;
+    margin-bottom: 0;
+}
+
+
+.trendingCard .cardInfo .icon img {
+    width: 50px;
+    transition: .3s;
+}
+
+.trendingCard .cardInfo .icon {
+    margin-right: 20px;
+}
+
+.trendingCard .cardInfo img:hover{
+    transform: scale(1.3);
+}
+
+/* END TRENDING GAMES */
+
+/* MOST PLAYED  */
+.cardImg img {
+    border-radius: 20px;
+}
+
+.mostCards .cardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mostCards .cardInfo .genre {
+    margin-bottom: 0;
+    color: gray;
+}
+
+.mostContainer {
+    background-color: #EEEEEE;
+    margin-top: 200px;
+    padding: 50px;
+    border-radius: 100px;
+}
+
+.mostContainer .mostPlayed, .category {
+    max-width: 1300px;
+    margin: auto;
+}
+
+/* END MOST PLAYED  */
+
+/* CATEGORY GAMES  */
+
+.categoryContainer {
+    margin-top: 150px;
+}
+
+.category .categoryHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.category .card .cardImg{
+    position: relative;
+    top: -20px;
+}
+
+.category .card .genre {
+    background-color: #0171F9;
+    text-align: center;
+    color: #fff;
+    padding: 15px 0 30px 0;
+    font-size: large;
+    font-weight: 500;
+    border-radius: 20px 20px 0 0;
+}
+
+.category .categoryCards {
+    margin-top: 30px;
+}
+.card {
+    transition: .3s;
+}
+
+.category .card:hover {
+    transform: scale(1.05);
+}
+
+
+/* END CATEGORY GAMES  */
+
+/* FOOTER  */
+.footerContainer {
+    background-color: #0171F9;
+    height: 150px;
+    border-radius: 100px 100px 0 0;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    max-width: 1300px;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    font-size: larger;
+}
+
+/* END FOOTER  */
+
+/* FORM  */
+.formContainer {
+    display: flex;
+    padding: 40px;
+    margin: auto;
+    justify-content: center;
+    max-width: 1300px;
+}
+
+.formContainer form {
+    background-color: #EEEEEE;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 400px;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    height: 450px;
+}
+
+.formContainer form input, textarea {
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    font-size: large;
+    /* width: 100%; */
+}
+
+.formContainer input {
+    height: 50px;
+    border-radius: 50px;
+}
+
+.formContainer textarea {
+    border-radius: 20px;
+    padding-top: 10px;
+    resize: none;
+}
+/* END FORM  */
